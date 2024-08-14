@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option go_package = ".;index_service";
+
+import "types/doc.proto";
+import "types/term_query.proto";
+
+package types;
+
+message DocId{
+  string DocId =1;
+}
+
+message AffectedCount{
+  int32 Count=1;
+}
+
+message SearchRequest{
+  types.TermQuery Query=1;
+  uint64 OnFlag =2;
+  uint64 OffFlag=3;
+  repeated uint64 OrFlags = 4;
+}
+
+message SearchResult{
+  repeated types.Document Result =1;
+}
+
+message CountRequest {
+}
+
+service IndexService {
+  rpc DeleteDoc(DocId) returns (AffectedCount);
+  rpc AddDoc(types.Document) returns (AffectedCount);
+  rpc Search(SearchRequest) returns (SearchResult);
+  rpc Count(CountRequest) returns (AffectedCount);
+}

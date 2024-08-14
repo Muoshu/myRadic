@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = ".;types";
+
+import "doc.proto";
+package types;
+
+message TermQuery{
+  Keyword Keyword = 1;    //Keyword类型引用自doc.proto
+  repeated TermQuery Must = 2;
+  repeated TermQuery Should = 3;
+}
+
