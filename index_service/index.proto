@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-option go_package = ".;index_service";
+package index_service;
 
-import "types/doc.proto";
-import "types/term_query.proto";
+import "doc.proto";  //从-I指定的目录下寻找该proto文件
+import "term_query.proto";
 
-package types;
+
 
 message DocId{
   string DocId =1;
@@ -29,9 +29,11 @@ message SearchResult{
 message CountRequest {
 }
 
+
 service IndexService {
   rpc DeleteDoc(DocId) returns (AffectedCount);
   rpc AddDoc(types.Document) returns (AffectedCount);
   rpc Search(SearchRequest) returns (SearchResult);
   rpc Count(CountRequest) returns (AffectedCount);
 }
+

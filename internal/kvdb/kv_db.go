@@ -1,7 +1,7 @@
 package kvdb
 
 import (
-	"myRadic/util"
+	"github.com/Muoshu/myRadic/util"
 	"os"
 	"strings"
 )

@@ -1,10 +1,10 @@
 package reverse_index
 
 import (
+	"github.com/Muoshu/myRadic/types"
+	"github.com/Muoshu/myRadic/util"
 	"github.com/huandu/skiplist"
 	farmhash "github.com/leemcloughlin/gofarmhash"
-	"myRadic/types"
-	"myRadic/util"
 	"runtime"
 	"sync"
 )

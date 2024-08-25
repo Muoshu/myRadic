@@ -1,6 +1,6 @@
 package reverse_index
 
-import "myRadic/types"
+import "github.com/Muoshu/myRadic/types"
 
 type IReverseIndexer interface {
 	Add(doc types.Document)

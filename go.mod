@@ -1,9 +1,10 @@
-module myRadic
+module github.com/Muoshu/myRadic
 
 go 1.21
 
 require (
 	github.com/dgraph-io/badger/v4 v4.2.0
+	github.com/gogo/protobuf v1.3.2
 	github.com/huandu/skiplist v1.2.0
 	github.com/leemcloughlin/gofarmhash v0.0.0-20160919192320-0a055c5b87a8
 	go.etcd.io/bbolt v1.3.10
@@ -11,7 +12,9 @@ require (
 	go.etcd.io/etcd/client/v3 v3.5.15
 	golang.org/x/exp v0.0.0-20240808152545-0cdaa3abc0fa
 	golang.org/x/time v0.6.0
+	google.golang.org/grpc v1.59.0
 	google.golang.org/protobuf v1.34.2
+
 )
 
 require (
@@ -20,7 +23,6 @@ require (
 	github.com/coreos/go-systemd/v22 v22.3.2 // indirect
 	github.com/dgraph-io/ristretto v0.1.1 // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
-	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/glog v1.1.2 // indirect
 	github.com/golang/groupcache v0.0.0-20190702054246-869f871628b6 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
@@ -39,5 +41,4 @@ require (
 	google.golang.org/genproto v0.0.0-20230822172742-b8732ec3820d // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20230822172742-b8732ec3820d // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230822172742-b8732ec3820d // indirect
-	google.golang.org/grpc v1.59.0 // indirect
 )

@@ -2,9 +2,9 @@ package index_service
 
 import (
 	"context"
+	"github.com/Muoshu/myRadic/util"
 	etcdv3 "go.etcd.io/etcd/client/v3"
 	"golang.org/x/time/rate"
-	"myRadic/util"
 	"strings"
 	"sync"
 	"time"
