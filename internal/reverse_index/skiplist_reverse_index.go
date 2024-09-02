@@ -44,7 +44,7 @@ func (indexer *SkipListReverseIndex) Add(doc types.Document) {
 		} else {
 			list := skiplist.New(skiplist.Uint64)
 			list.Set(doc.IntId, skpVal)
-			indexer.table.Set(key, val)
+			indexer.table.Set(key, list)
 		}
 		lock.Unlock()
 
